@@ -4,8 +4,6 @@
 	padding:0;
 }
 
-<<<<<<< HEAD
-=======
 /* Accessibility helpers */
 .sr-only {
 	position: absolute;
@@ -24,7 +22,6 @@
 	outline-offset: 2px;
 }
 
->>>>>>> 9faf392 (feat(ui): modernize layout, add contact and interactivity)
 :root {
 	--base: #555;
 	--base-100: #f1f1f1;
@@ -45,11 +42,7 @@ body {
 	font-optical-sizing: auto;
 	font-style: normal;
 	font-size: 20px;
-<<<<<<< HEAD
-	padding-bottom:1000px;
-=======
 	padding-bottom:0;
->>>>>>> 9faf392 (feat(ui): modernize layout, add contact and interactivity)
 }
 
 a {
@@ -68,14 +61,11 @@ header {
 	max-width:1440px;
 	margin:auto;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
-<<<<<<< HEAD
-=======
 	position: sticky;
 	top: 0;
 	z-index: 50;
 	background-color: rgba(255,255,255,0.75);
 	backdrop-filter: saturate(180%) blur(8px);
->>>>>>> 9faf392 (feat(ui): modernize layout, add contact and interactivity)
 
 	.logo-holder {
 		display:flex;
@@ -427,20 +417,6 @@ h3 {
 	}
 }
 
-/* EDUCATION PART */
-/* .work-experience#education .jobs { 
-   display: grid;
-   grid-template-columns: repeat(4, 1fr); 
-   gap: 30px; 
-}
-
-@media (max-width: 1400px) and (min-width: 1024px) {
-   .work-experience#education .jobs {
-       grid-template-columns: repeat(2, minmax(0, 1fr)); 
-   }
-} */
-
-
 .bento {
 	.bento-grid {
 		display:grid;
@@ -642,8 +618,6 @@ h3 {
 			}
 		}
 	}
-<<<<<<< HEAD
-=======
 }
 
 /* Contact section */
@@ -704,5 +678,4 @@ h3 {
 		animation: none !important;
 		transition: none !important;
 	}
->>>>>>> 9faf392 (feat(ui): modernize layout, add contact and interactivity)
 }
