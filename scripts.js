@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-  document.querySelectorAll('section, .work-experience article, .project-card, .contact-card').forEach(function (el) {
+  document.querySelectorAll('section, .work-experience article, .case-study-card, .contact-card').forEach(function (el) {
     el.classList.add('reveal');
     observer.observe(el);
   });
