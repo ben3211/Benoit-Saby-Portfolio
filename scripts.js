@@ -3,6 +3,67 @@ document.addEventListener('DOMContentLoaded', function () {
   var toggleBtn = document.querySelector('.mobile-toggle');
   var header = document.querySelector('header');
   var headerOffset = 100;
+  var storageKey = 'portfolio-lang';
+
+  function getNestedValue(obj, path) {
+    return path.split('.').reduce(function (acc, key) {
+      return acc && acc[key] !== undefined ? acc[key] : null;
+    }, obj);
+  }
+
+  function setLanguage(lang) {
+    if (!window.PORTFOLIO_I18N || !window.PORTFOLIO_I18N[lang]) return;
+
+    var strings = window.PORTFOLIO_I18N[lang];
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var value = getNestedValue(strings, el.getAttribute('data-i18n'));
+      if (value !== null) el.textContent = value;
+    });
+
+    document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+      var value = getNestedValue(strings, el.getAttribute('data-i18n-alt'));
+      if (value !== null) el.setAttribute('alt', value);
+    });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var value = getNestedValue(strings, el.getAttribute('data-i18n-aria'));
+      if (value !== null) el.setAttribute('aria-label', value);
+    });
+
+    if (strings.meta) {
+      document.title = strings.meta.title;
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', strings.meta.description);
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      var active = btn.getAttribute('data-lang') === lang;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+
+    try {
+      localStorage.setItem(storageKey, lang);
+    } catch (e) { /* ignore */ }
+  }
+
+  var savedLang = 'fr';
+  try {
+    savedLang = localStorage.getItem(storageKey) || 'fr';
+  } catch (e) { /* ignore */ }
+
+  if (savedLang !== 'fr') setLanguage(savedLang);
+
+  document.querySelectorAll('.lang-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      setLanguage(btn.getAttribute('data-lang'));
+      if (menu && menu.classList.contains('active')) {
+        window.toggleMobileMenu();
+      }
+    });
+  });
 
   window.toggleMobileMenu = function () {
     if (!menu || !toggleBtn) return;
@@ -20,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!progressBar) {
       progressBar = document.createElement('div');
       progressBar.id = 'scroll-progress';
-      progressBar.style.cssText = 'position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#64ffda,#00d9a5);z-index:100;transition:width 0.1s ease;';
+      progressBar.style.cssText = 'position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,#64ffda,#00d9a5);z-index:100;transition:width 0.1s ease;';
       document.body.appendChild(progressBar);
     }
 
@@ -30,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', function () {
     updateScrollProgress();
     if (header) {
-      header.style.boxShadow = window.scrollY > 50 ? '0 2px 10px rgba(0,0,0,0.15)' : 'none';
+      header.style.boxShadow = window.scrollY > 50 ? '0 2px 12px rgba(0,0,0,0.18)' : 'none';
     }
   });
 
@@ -64,11 +125,11 @@ document.addEventListener('DOMContentLoaded', function () {
       if (entry.isIntersecting) {
         setTimeout(function () {
           entry.target.classList.add('is-visible');
-        }, index * 80);
+        }, index * 60);
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
 
   document.querySelectorAll('section, .work-experience article, .case-study-card, .contact-card').forEach(function (el) {
     el.classList.add('reveal');
