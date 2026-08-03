@@ -2,7 +2,7 @@ window.PORTFOLIO_I18N = {
   fr: {
     meta: {
       title: 'Benoit Saby — Développeur .NET Full Stack',
-      description: 'Benoit Saby — Développeur .NET Full Stack spécialisé en applications métier, ERP, données et Microsoft Azure. Basé à Thonon-les-Bains, projet professionnel en Suisse.'
+      description: 'Benoit Saby — Développeur .NET Full Stack spécialisé en applications métier, ERP, données et Microsoft Azure. Basé à Thonon-les-Bains. Mobilité nationale et internationale.'
     },
     nav: {
       experience: 'Expériences',
@@ -16,7 +16,7 @@ window.PORTFOLIO_I18N = {
       eyebrow: 'Développeur .NET Full Stack',
       tagline: 'Applications métier · ERP · Données · Azure',
       location: 'Basé à Thonon-les-Bains',
-      mobility: 'Projet professionnel en Suisse',
+      mobility: 'Mobilité nationale et internationale',
       ctaContact: 'Me contacter',
       ctaLinkedin: 'LinkedIn',
       alt: 'Benoit Saby — Développeur .NET Full Stack'
@@ -30,7 +30,7 @@ window.PORTFOLIO_I18N = {
       skills: 'Compétences',
       education: 'Formations',
       about: 'À propos',
-      languages: 'Langues & projet professionnel',
+      languages: 'Langues & mobilité',
       contact: 'Contact'
     },
     jobs: {
@@ -122,18 +122,22 @@ window.PORTFOLIO_I18N = {
       e5d: 'Faculté des Sciences de Luminy, Marseille'
     },
     about: {
-      text: 'Développeur .NET Full Stack, curieux et rigoureux, je conçois des applications d\'entreprise fiables autour de l\'ERP, des données et d\'Azure. Mon parcours en finance et en sciences m\'a donné une culture de la précision et de l\'analyse. Mon projet professionnel vise la Suisse, sur des logiciels métier et des environnements enterprise.'
+      text: 'Développeur .NET Full Stack, curieux et rigoureux, je conçois des applications d\'entreprise fiables autour de l\'ERP, des données et d\'Azure. Mon parcours en finance et en sciences m\'a donné une culture de la précision et de l\'analyse.'
     },
     locale: {
       french: 'Français', frenchLevel: 'Langue maternelle',
       english: 'Anglais', englishLevel: 'Niveau professionnel',
       location: 'Localisation', locationValue: 'Basé à Thonon-les-Bains',
-      mobility: 'Projet professionnel', mobilityValue: 'En Suisse'
+      mobilityLabel: 'Mobilité',
+      mobilityValue: 'Nationale et internationale',
+      careerFocus: 'Projet professionnel',
+      careerStatement1: 'Je cherche à construire un parcours durable dans une entreprise où je peux continuer à apprendre, affiner mes compétences techniques et prendre progressivement plus de responsabilités. J\'aime comprendre le métier derrière les logiciels que je développe et travailler sur des applications réellement utiles.',
+      careerStatement2: 'La finance, la fintech, l\'ingénierie logicielle et les applications métier m\'attirent particulièrement, sans m\'enfermer dans un seul secteur.'
     },
     contact: {
-      intro: 'Projet professionnel en Suisse — applications métier, ERP ou Azure. Contact par email ou LinkedIn.',
+      intro: 'Applications métier, ERP ou Azure. Contact par email ou LinkedIn.',
       email: 'Email', linkedin: 'LinkedIn', github: 'GitHub',
-      location: 'Localisation', mobility: 'Projet professionnel',
+      location: 'Localisation',
       techLabel: 'Technologies'
     },
     common: {
@@ -143,7 +147,7 @@ window.PORTFOLIO_I18N = {
   en: {
     meta: {
       title: 'Benoit Saby — .NET Full Stack Developer',
-      description: 'Benoit Saby — .NET Full Stack Developer focused on enterprise applications, ERP, data and Microsoft Azure. Based in Thonon-les-Bains, France, pursuing opportunities in Switzerland.'
+      description: 'Benoit Saby — .NET Full Stack Developer focused on enterprise applications, ERP, data and Microsoft Azure. Based in Thonon-les-Bains, France. National & international mobility.'
     },
     nav: {
       experience: 'Experience',
@@ -157,7 +161,7 @@ window.PORTFOLIO_I18N = {
       eyebrow: '.NET Full Stack Developer',
       tagline: 'Business Applications · ERP · Data · Azure',
       location: 'Based in Thonon-les-Bains, France',
-      mobility: 'Pursuing opportunities in Switzerland',
+      mobility: 'National & International Mobility',
       ctaContact: 'Get in touch',
       ctaLinkedin: 'LinkedIn',
       alt: 'Benoit Saby — .NET Full Stack Developer'
@@ -171,7 +175,7 @@ window.PORTFOLIO_I18N = {
       skills: 'Skills',
       education: 'Education',
       about: 'About',
-      languages: 'Languages & career focus',
+      languages: 'Languages & mobility',
       contact: 'Contact'
     },
     jobs: {
@@ -263,18 +267,22 @@ window.PORTFOLIO_I18N = {
       e5d: 'Faculty of Sciences of Luminy, Marseille'
     },
     about: {
-      text: '.NET Full Stack Developer with a rigorous, analytical approach to building reliable enterprise applications around ERP, data and Azure. A background in finance and science shaped my precision and data mindset. Pursuing a professional career in Switzerland, focused on business software and enterprise environments.'
+      text: '.NET Full Stack Developer with a rigorous, analytical approach to building reliable enterprise applications around ERP, data and Azure. A background in finance and science shaped my precision and data mindset.'
     },
     locale: {
       french: 'French', frenchLevel: 'Native',
       english: 'English', englishLevel: 'Professional',
       location: 'Location', locationValue: 'Based in Thonon-les-Bains, France',
-      mobility: 'Career focus', mobilityValue: 'Switzerland'
+      mobilityLabel: 'Mobility',
+      mobilityValue: 'National & International',
+      careerFocus: 'Career focus',
+      careerStatement1: 'I\'m looking to build a long-term career in a company where I can keep learning, sharpen my technical skills and take on growing responsibilities. I enjoy understanding the business behind the software I build and working on applications that are genuinely useful.',
+      careerStatement2: 'Finance, fintech, software engineering and business software particularly interest me, without limiting myself to one industry.'
     },
     contact: {
-      intro: 'Pursuing opportunities in Switzerland — business applications, ERP or Azure. Reach out via email or LinkedIn.',
+      intro: 'Business applications, ERP or Azure. Reach out via email or LinkedIn.',
       email: 'Email', linkedin: 'LinkedIn', github: 'GitHub',
-      location: 'Location', mobility: 'Career focus',
+      location: 'Location',
       techLabel: 'Technologies'
     },
     common: {

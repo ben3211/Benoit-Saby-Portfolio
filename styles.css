@@ -808,6 +808,32 @@ h3 {
 	font-size: 0.95rem;
 }
 
+.career-statement {
+	margin-top: 24px;
+	background-color: var(--navy-light);
+	border: 1px solid var(--navy-lighter);
+	border-radius: 10px;
+	padding: 28px 30px;
+}
+
+.career-statement h3 {
+	color: var(--accent);
+	margin-bottom: 14px;
+	font-size: 1rem;
+	text-align: left;
+}
+
+.career-statement p {
+	color: var(--slate-light);
+	font-size: 0.95rem;
+	line-height: 1.65;
+	margin-bottom: 14px;
+}
+
+.career-statement p:last-child {
+	margin-bottom: 0;
+}
+
 @media (max-width: 1024px) {
 	.languages-grid {
 		grid-template-columns: repeat(2, 1fr);
